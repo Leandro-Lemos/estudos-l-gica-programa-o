@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
     margin:0%;
-    padding:0%;
+    
 }
 :root {
     --fontePadrão:'Roboto', sans-serif;
@@ -11,28 +11,57 @@
 
 }
 body {
-    background-image: linear-gradient(to bottom, rgb(11, 197, 11) 60%, rgb(21, 119, 8));
-    display: block;
-    margin:0%;
+    background-image: linear-gradient(to bottom, rgb(11, 197, 11) 60%, rgb(21, 119, 8));    
     height: 100vw;
+    background-repeat: no-repeat;
+    
 }
 
-.medida_terreno {
-    margin-top: 100px;
-    justify-content: center; 
-    text-align: center; 
+body h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: azure;
+    text-shadow: 1px 1px black;
+    font-family: var(--fontePadrão);
+    font-size: 1.5em;
+    
 }
 
-.medida_terreno > form label {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:12px;
-    color:#036;
-    font-weight:bold;
-    float:left;
+.conteiner {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    
+
+
 }
 
-form input[type="text"] {
-    background-color:#f2f2f2;
-    border:1px solid #000;
-    padding:5px;
+.medida_terreno {  
+    background-color: aliceblue; 
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    box-shadow: rgba(0, 0, 0, 0.30) 2px 2px 2.6px;
+    padding: 30px;
+    min-width: 300px;
+     
+   
 }
+
+.medida_terreno .formQuestions {
+    display: block;
+    align-content: flex-end;
+
+} 
+
+
+
+.medida_terreno input.valorCampo
+{
+    max-width: 60px;
+    margin: 10px;
+  
+}
+
