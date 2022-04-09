@@ -1,2 +1,2 @@
-# estudos-l-gica-programa-o
+# estudos-lógica-programação
 Exercícios e aprendizado sobre lógica
