@@ -1,0 +1,44 @@
+
+body {
+    background-color: brown;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+      
+  
+}
+    
+
+body .caixaPrincipal {
+    background-color: aquamarine;
+    width: 500px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+
+}
+
+.caixaCorpo {
+    background-color: blue;
+    max-width: 300px;
+    margin: 10px;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    
+    
+    
+}
+
+
+.caixaCartao {
+    background-color: rgb(151, 142, 7);
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    text-align: center;
+   
+
+}

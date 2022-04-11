@@ -14,7 +14,7 @@ body {
     background-image: linear-gradient(to bottom, rgb(11, 197, 11) 60%, rgb(21, 119, 8));    
     height: 100vw;
     background-repeat: no-repeat;
-    
+    text-align: center;    
 }
 
 body h2 {
@@ -59,7 +59,13 @@ body h2 {
   
 }
 
-@media only screen and (max-width: 480px){
+footer {
+    font-family: var(--fontePadrão);
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 720px){
     .medida_terreno {  
         max-width: 240px; 
         display: flex;
@@ -68,7 +74,7 @@ body h2 {
     }
     .medida_terreno input.valorCampo {
     max-width: 60px;
-    margin-left:5px;
+    margin-left:0px;
   }
   .medida_terreno .formQuestions {
     display: block;
