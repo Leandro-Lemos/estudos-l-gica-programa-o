@@ -13,8 +13,17 @@
 body {
     background-image: linear-gradient(to bottom, rgb(11, 197, 11) 60%, rgb(21, 119, 8));    
     height: 100vw;
-    background-repeat: no-repeat;
-    text-align: center;    
+    background-repeat: no-repeat; 
+}
+header nav {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
 }
 
 body h2 {
@@ -63,6 +72,7 @@ footer {
     font-family: var(--fontePadrão);
     font-size: 0.8em;
     margin-top: 10px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 720px){
@@ -79,7 +89,7 @@ footer {
   .medida_terreno .formQuestions {
     display: block;
     align-content:space-between;
-    justify-content: center;
+    justify-content: left;
 
 } 
 }
