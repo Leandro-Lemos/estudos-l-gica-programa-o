@@ -19,9 +19,10 @@
     </header>
     <main>
         <!--Ajuste branch html teste merge-->
-        <h2>Exercício Medidas Terreno </h2>
+        
         <div class="conteiner">
             <div class="medida_terreno">
+                    <h2>Exercício Medidas Terreno </h2>
                     <section class="formQuestions">
                         <label for="larguraMetros">Digite a largura do terreno:</label>
                         <input type="number" class="valorCampo" size="1" /><br>
@@ -32,9 +33,26 @@
                         <button type="submit" onclick="Converter()">Calcular</button>
                         <button type="submit" onclick="LimparCampos()">Limpar</button>
                     </section>
+                    <p>Resultado</p>
+                    <section class="resultado">
+                        <h2 id="valorConvertido/alqueire"></h2>
+                        <h2 id="valorConvertido/litros"></h2>
+                    </section>
+            </div>
+            <div class="conversorTerreno">
+                <h2>Exercício Conversor Medidas Terreno </h2> 
+                <section class="formQuestions">
+                    <p>Converta medida de metros quadrados para Alqueire</p>
+                    <label for="medidaMetros">Insira o valor em m²:</label><br>
+                    <input type="number" id="valor" size="2" /><br>
+                    <button type="submit" onclick="Converter()">Converter</button>
+                </section>
+                <p>Resultado</p>
+                <section class="resultado">
                     <h2 id="valorConvertidoalqueire"></h2>
                     <h2 id="valorConvertidolitros"></h2>
-            </div>
+                </section>
+              </div>
         </div>
     </main>
     <footer>
