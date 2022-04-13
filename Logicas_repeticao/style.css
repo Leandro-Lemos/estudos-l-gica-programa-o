@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
     margin:0%;
+
     
 }
 :root {
@@ -19,7 +20,7 @@ body {
 main {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
 }
 
 header nav {
@@ -35,7 +36,6 @@ nav ul {
 
 body h2 {
     text-align: center;
-    margin-top: 50px;
     color: azure;
     text-shadow: 1px 1px black;
     font-family: var(--fontePadrão);
@@ -52,8 +52,8 @@ body h2 {
 }
 
 .resultado {
-    background-color: aquamarine;
-    padding: 1px;
+    background-color: rgb(182, 245, 224);
+    padding: 10px;
     font-family: 'Courier New', Courier, monospace;
 
 }
@@ -67,7 +67,7 @@ body h2 {
     border-radius: 10px;
     margin-top: 10px;
     box-shadow: rgba(0, 0, 0, 0.30) 2px 2px 2.6px;
-    padding: 30px;
+    padding:30px;
     max-width: 400px; 
     min-height: 300px;       
 }
@@ -88,7 +88,7 @@ footer {
 }
 
 .formQuestions label {
-    color: rgb(151, 14, 14);
+    color: rgb(3, 0, 0);
 }
 
 .conversorTerreno {  
@@ -119,23 +119,16 @@ button:hover {
 
 
 @media only screen and (max-width: 800px){
-     
-    .conteiner {
-        display:block;
-        padding: 5px;
+    body {
+        height: 200vh;  
+        
     }
-    .medida_terreno {  
-        justify-content: space-between;
-    
-    }
-    .medida_terreno input.valorCampo {
-    max-width: 60px;
-    margin-left:0px;
-  }
-  .medida_terreno .formQuestions {
-    display: block;
-    align-content:space-around;
-    justify-content: left;
 
-} 
+   main .conteiner {
+        display:block;
+        align-items: center;
+        max-width: 400px;
+    }
+   
+    
 }
