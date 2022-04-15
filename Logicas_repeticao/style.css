@@ -13,7 +13,8 @@
 }
 body {
     background-image: linear-gradient(to bottom, rgb(11, 197, 11) 60%, rgb(21, 119, 8));    
-    height: 100vh; 
+    height: 100%; 
+    background-repeat: no-repeat;
     
 }
 
