@@ -22,30 +22,53 @@
         
         <div class="conteiner">
             <div class="medida_terreno">
-                    <h2>Exercício Medidas Terreno </h2>
-                    <section class="formQuestions">
-                        <label for="larguraMetros">Digite a largura do terreno:</label>
-                        <input type="number" class="valorCampo" size="1" /><br>
-                        <label for="comprimentoMetros">Digite o comprimento do terreno:</label>
-                        <input type="number" class="valorCampo" size="1" /><br>
-                        <label for="valorMetro">Digite o valor em R$ por m²:</label>
-                        <input type="number" class="valorCampo" size="1" /><br>
-                        <button type="submit" onclick="Converter()">Calcular</button>
-                        <button type="submit" onclick="LimparCampos()">Limpar</button>
-                    </section>
-                    <p>Resultado</p>
-                    <section class="resultado">
-                        <h2 id="valorConvertido/alqueire"></h2>
-                        <h2 id="valorConvertido/litros"></h2>
-                    </section>
+                    <div class="medida_terreno_form">
+                        <h2>Conversor valor àreas Terreno </h2>
+                                <div><label for="larguraMetros">Digite a largura do terreno:</label></div>
+                                <div><input type="number" class="valorCampo" size="1" /><br></div>
+                                <div><label for="comprimentoMetros">Digite o comprimento do terreno:</label></div>
+                                <div><input type="number" class="valorCampo" size="1" /><br></div>
+                                <div><label for="valorMetro">Digite o valor em R$ por m²:</label></div>
+                                <div><input type="number" class="valorCampo" size="1" /><br></div>
+                                <button type="submit" onclick="Converter()">Calcular</button>
+                                <button type="submit" onclick="LimparCampos()">Limpar</button>
+                                <div>
+                                <p>Resultado</p>
+                                </div>                            
+                        <section class="resultado">
+                            <h2 id="valorConvertido/alqueire"></h2>
+                            <h2 id="valorConvertido/litros"></h2>
+                        </section>
+                    </div>
             </div>
             <div class="conversorTerreno">
-                <h2>Exercício Conversor Medidas Terreno </h2> 
-                <section class="formQuestions">
-                    <p>Converta medida de metros quadrados para Alqueire</p>
-                    <label for="medidaMetros">Insira o valor em m²:</label><br>
-                    <input type="number" id="valor" size="2" /><br>
+                <h2>Conversor Medidas Terrenos </h2> 
+                <section class="conversorTerrenoFormQuestions">
+                    <div>
+                        <p>Converta metros quadrados para Alqueire:</p>
+                    </div>
+                    <div><label for="medidaMetros">Insira o valor em m²:</label><br></div>
+                    <div><input type="number" id="valor" class="valorCampo" size="2" /><br></div>
                     <button type="submit" onclick="Converter()">Converter</button>
+                    <button type="submit" onclick="LimparCampos()">Limpar</button>
+                </section>
+                <p>Resultado</p>
+                <section class="resultado">
+                    <h2 id="valorConvertidoalqueire"></h2>
+                    <h2 id="valorConvertidolitros"></h2>
+                </section>
+              </div>
+
+              <div class="conversorTerreno">
+                <h2>Conversor Medidas Exemplo3 </h2> 
+                <section class="conversorTerrenoFormQuestions">
+                    <div>
+                        <p>Converta metros quadrados para Alqueire:</p>
+                    </div>
+                    <div><label for="medidaMetros">Insira o valor em m²:</label><br></div>
+                    <div><input type="number" id="valor" class="valorCampo" size="2" /><br></div>
+                    <button type="submit" onclick="Converter()">Converter</button>
+                    <button type="submit" onclick="LimparCampos()">Limpar</button>
                 </section>
                 <p>Resultado</p>
                 <section class="resultado">

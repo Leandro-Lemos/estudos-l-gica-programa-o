@@ -1,3 +1,5 @@
+Atalho multi seleção >>> alt+ shift + setas
+
 # estudos-lógica-programação
 Exercícios e aprendizado sobre lógica
 ## CCS Unidades de Media
