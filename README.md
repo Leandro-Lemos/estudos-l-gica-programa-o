@@ -1,5 +1,73 @@
 Atalho multi seleção >>> alt+ shift + setas
 
+# Git e Git hub
+
+para clonar um repositório>>> git clone 
+
+Branches
+para saber em qual branch se está >> git branch
+para criar uma nova >> git branch teste leandro 
+para mudar de branch > git checkout leandro (sai de main e vai para teste leandro).
+para enviar a branch no repositório >> git push origin teste leandro
+
+Como remover um branch
+// excluir um branch no local
+>> git branch -d nomeDoBranchLocal ( com -d só dá certo se não tem push e merge)
+para forçar >  git branch -D nomeDoBranchLocal
+
+// excluir um branch remoto
+git push origin --delete nomeDoBranchRemoto (em teste exclui direto do remoto apenas com o primeiro teste. 
+ou >> 
+
+
+Merge
+Para fazer o merge vai para a master usando  >>> git checkout master
+Depois >>> git merge teste leandro
+
+Depois para atualizar o repositório do github  faz um >> git push -u origin master para atualizar o principal.
+
+
+Como remover um branch>> 
+
+// excluir um branch no local
+>> git branch -d nomeDoBranchLocal ( com -d só dá certo se não tem push e merge)
+
+// excluir um branch remoto
+git push origin --delete nomeDoBranchRemoto (em teste exclui direto do remoto apenas com o primeiro teste. 
+
+Git pull: buscando alterações remotas
+Pode ser preciso resolver conflitos dos arquivos versões
+Commits
+
+Para adicionar o arquivo para ser monitorado >> git add index.html
+adicionar todos >> git add -A ou então git add . 
+
+Para mudanças apenas em arquivos existentes: 
+git commit -m "Sua Mensagem"
+
+Para fazer o commit e salvar permanentemente a mudança>> 
+git commit -m "msg:comitando teste envio terminal" 
+
+verificar histórico > git log  como sair >>> digita Q
+
+Desfazendo um commit >> git reset HEAD~1  ou git reset HEAD^ ou git reset HEAD~
+Desfazendo vários >> git reset HEAD~3
+
+
+Final >> envio para meu repositório remoto >>>
+
+git push -u origin master 
+
+
+
+Para iniciar o repositório versionamento na pasta >>> git init 
+
+Para conectar com repositório Git Hub>>>
+
+git remote add origin git@github.com:Leandro-Lemos/Projeto_node_lib.git
+
+Para conferir alterações >> git status
+
 # estudos-lógica-programação
 Exercícios e aprendizado sobre lógica
 ## CCS Unidades de Media
