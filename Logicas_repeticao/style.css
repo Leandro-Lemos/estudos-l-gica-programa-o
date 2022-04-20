@@ -15,20 +15,46 @@ body {
     background-image: linear-gradient(to bottom, rgb(11, 197, 11) 60%, rgb(21, 119, 8));    
     min-height: 100vw; 
     background-repeat: no-repeat;
-    
+    align-items: center;
+}
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.nav {
+    min-width: 900px;
+    display: flex;
+    background-color: rgb(46, 42, 42);
+    padding: 10px 50px 10px 50px;
+    justify-content: space-between;
 }
 
-header nav {
-    margin-top: 20px;
+.menu {    
+    margin-bottom: 15px;    
     display: flex;
     align-items: center;
-    justify-content: center;
+    list-style: none;
+    gap: 0.5rem;
 }
 
+a {
+    color: rgb(247, 236, 236);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+a:hover {
+    background: rgba(250, 247, 247, 0.25);
+    padding: 5px;
+    border-radius: 5px;
+}
 nav ul {
     list-style: none;
 }
 
+.logo {
+    width: 50px;
+}
 body h2 {
     text-align: center;
     color: rgb(1, 71, 71);
