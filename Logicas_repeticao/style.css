@@ -30,6 +30,9 @@ header {
     display: flex;    
     justify-content: space-between;
 }
+#btn-mobile {
+    display: none;
+}
 
 .menu {    
     margin-bottom: 15px;    
@@ -38,6 +41,7 @@ header {
     list-style: none;
     gap: 0.5rem;
 }
+
 
 a {
     color: rgb(247, 236, 236);
@@ -165,5 +169,32 @@ button:hover {
     background-color:rgb(13, 231, 42);
 }
 
+@media (max-width: 600px){
+    #btn-mobile {
+        display: block;
+    }
+    .menu {
+        display: none;
+        
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 70px);
+        top:70px;
+        right: 0px;
+        background: #0FFDE9;
+        z-index: 1000;
 
+    }
+
+    #nav.active .menu {
+        display: block;
+        width: 100%;
+    }
+    
+    .menu > li {
+        padding: 10px;
+        margin: 10px;
+        border-bottom: 2px solid rgba(0, 0,  0, 0.05);
+    }
+}
 

@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicios Lógicos</title>
-    <script src="./Logicas_repeticao/logicas.js"></script>
+    <script src="./Logicas_repeticao/logicas.js" defer></script>
     <link rel="stylesheet" href="./Logicas_repeticao/style.css">
 </head>
 <body>
     <header>  
         <img class="logo" src="./imagens/icone_infinito.png" alt="imagem_logo">                 
-        <nav class="nav">
+        <nav id= "nav">
+            <button id="btn-mobile">Menu</button>
             <ul class="menu"> 
                 <li><a href="#">Sobre</a></li>
                 <li><a href="ajustes caixas/caixas.html">Layout Flex/Grid</a></li>
@@ -29,17 +30,17 @@
             <div class="medida_terreno">
                     <div class="medida_terreno_form">
                         <h2>Conversor valor àreas Terreno </h2>
-                                <div><label for="larguraMetros">Digite a largura do terreno:</label></div>
-                                <div><input type="number" id="campoLargura" class="valorCampo" size="1" /><br></div>
-                                <div><label for="comprimentoMetros">Digite o comprimento do terreno:</label></div>
-                                <div><input type="number" id="campoComprimento" class="valorCampo" size="1" /><br></div>
-                                <div><label for="valorMetro">Digite o valor em R$ por m²:</label></div>
-                                <div><input type="number" id="campoValorArea" class="valorCampo" size="1" /><br></div>
-                                <button type="submit" onclick="ConverterAreaValor()">Calcular</button>
-                                <button type="submit" onclick="LimparCampos()">Limpar</button>
-                                <div>
-                                <p>Resultado</p>
-                                </div>                            
+                                    <div><label for="larguraMetros">Digite a largura do terreno:</label></div>
+                                    <div><input type="number" id="campoLargura" class="valorCampo" size="1" /><br></div>
+                                    <div><label for="comprimentoMetros">Digite o comprimento do terreno:</label></div>
+                                    <div><input type="number" id="campoComprimento" class="valorCampo" size="1" /><br></div>
+                                    <div><label for="valorMetro">Digite o valor em R$ por m²:</label></div>
+                                    <div><input type="number" id="campoValorArea" class="valorCampo" size="1" /><br></div>
+                                    <button type="submit" onclick="ConverterAreaValor()">Calcular</button>
+                                    <button type="submit" onclick="LimparCampos()">Limpar</button>                                
+                                    <div>
+                                        <p>Resultado</p>
+                                    </div>                           
                         <section class="resultado">
                             <h2 id="totalAreaTerreno"></h2>
                             <h2 id="valorTotalTerreno"></h2>
@@ -52,10 +53,10 @@
                     <div>
                         <p>Converta metros quadrados para Alqueire:</p>
                     </div>
-                    <div><label for="medidaMetros">Insira o valor em m²:</label><br></div>
-                    <div><input type="number" id="valor" class="valorCampo" size="2" /><br></div>
-                    <button type="submit" onclick="ConverterArea()">Converter</button>
-                    <button type="submit" onclick="LimparCampos()">Limpar</button>
+                        <div><label for="medidaMetros">Insira o valor em m²:</label><br></div>
+                        <div><input type="number" id="valor" class="valorCampo" size="2" /><br></div>
+                        <button type="submit" onclick="ConverterArea()">Converter</button>
+                        <button type="submit" onclick="LimparCampos()">Limpar</button>
                 </section>
                 <p>Resultado</p>
                 <section class="resultado">
@@ -70,10 +71,10 @@
                     <div>
                         <p>Converta metros quadrados para Alqueire:</p>
                     </div>
-                    <div><label for="medidaMetros">Insira o valor em m²:</label><br></div>
-                    <div><input type="number" id="valor" class="valorCampo" size="2" /><br></div>
-                    <button type="submit" onclick="Converter()">Converter</button>
-                    <button type="submit" onclick="LimparCampos()">Limpar</button>
+                        <div><label for="medidaMetros">Insira o valor em m²:</label><br></div>
+                        <div><input type="number" id="valor" class="valorCampo" size="2" /><br></div>
+                        <button type="submit" onclick="Converter()">Converter</button>
+                        <button type="submit" onclick="LimparCampos()">Limpar</button>
                 </section>
                 <p>Resultado</p>
                 <section class="resultado">
