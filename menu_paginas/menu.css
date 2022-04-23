@@ -69,7 +69,6 @@ nav ul {
         width: 30px;
         margin-right: 5px;
         background-repeat: no-repeat;
-
     }
     
     .menu {
@@ -81,7 +80,6 @@ nav ul {
         right: 0px;
         background: #0FFDE9;
         z-index: 1000;
-
     }
 
     #nav.active .menu {
