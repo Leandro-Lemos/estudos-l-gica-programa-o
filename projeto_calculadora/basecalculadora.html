@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../menu.css">
+    <script src="../menu.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../imagens/icone_infinito.png" alt="imagem_logo">
+        <nav id="nav">
+            <button id="btn-mobile"></button>
+            <ul class="menu">
+                <li><a href="#">Sobre</a></li>
+                <li><a href="../ajustes caixas/caixas.html">Layout Flex/Grid</a></li>
+                <li><a href="#">Categoria Arrays</a></li>
+                <li><a href="#">Categoria Laços</a></li>
+                <li><a href="#">Categora Cálculo</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="conteinercalculadora">
+            <div class="calculadoraTopo">
+                <p>teste</p>
+                <div class=”calculadora_display”>0</div>
+                <div class=”calculadora_keys”> … </div>
+            </div>
+            <div class="operacoes">                
+                <div class="botoesnum">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>0</button>
+                    <button data-action="decimal">.</button>
+                    <button data-action="clear">AC</button>
+                </div>
+                <div class="botoesOperacoes">
+                    <button data-action="clear">AC</button>
+                    <button class="key--operator" data-action="subtract">-</button>
+                    <button class="key--operator" data-action="multiply">&times;</button>
+                    <button class="key--operator" data-action="divide">÷</button>
+                    <button class="key--operator" data-action="add">+</button>
+                    <button class="key--equal" data-action="calculate">=</button>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </main>
+    <footer>
+        <nav class="footer">
+            <p>Projeto - Aprendendo sobre layout e lógica</p>
+        </nav>
+
+    </footer>
+
+</body>
+
+</html>

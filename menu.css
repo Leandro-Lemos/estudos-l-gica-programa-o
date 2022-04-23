@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin:0%;    
+}
+
+
+:root {
+    --fontePadrão:'Roboto', sans-serif;
+    --fonteExtra: 'Bebas Neue', cursive;
+
+}
+body {   
+    min-height: 100vw; 
+    background-repeat: no-repeat;   
+}
+
+header {
+    background-color: rgb(46, 42, 42);
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav {
+    height: 70px;
+    display: flex;    
+    justify-content: space-between;
+}
+#btn-mobile {
+    display: none;
+}
+
+.menu {    
+    margin-bottom: 15px;    
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.menu a {
+    color: rgb(247, 236, 236);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.menu > li a:hover {
+    background: rgba(250, 247, 247, 0.25);
+    padding: 5px;
+    border-radius: 5px;
+}
+nav ul {
+    list-style: none;
+}
+
+.logo {
+    width: 50px;
+}
+
+@media (max-width: 600px){
+    #btn-mobile {
+        display: block;
+        background-color:transparent;
+        border: none;
+        background-image: url(./imagens/menuhamburguer.png);
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+
+    }
+    #btn-mobile:hover {
+        width:  35px;
+    
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height:2050vh;
+        top:80px;
+        right: 0px;
+        background: #0FFDE9;
+        z-index: 1000;
+
+    }
+
+    #nav.active .menu {
+        display: block;
+        width: 100%;
+    }
+    
+    .menu > li {
+        padding: 10px;
+        margin: 10px;
+        border-bottom: 2px solid rgba(0, 0,  0, 0.05);
+    }
+    .menu > li a:hover {
+        background-color: rgb(217, 241, 232);
+        border-radius: 0px 0px 5px 5px;
+        padding:5px 120px 5px 5px;
+    }
+
+    .menu > li > a {
+        color: rgb(43, 39, 39);
+    }
+    
+}
+
