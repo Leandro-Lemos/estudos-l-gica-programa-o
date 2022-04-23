@@ -51,7 +51,7 @@ a {
 a:hover {
     background: rgba(250, 247, 247, 0.25);
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 nav ul {
     list-style: none;
@@ -176,14 +176,12 @@ button:hover {
         border: none;
         background-image: url(../imagens/menuhamburguer.png);
         height: 50px;
-        width: 50px;
+        width: 30px;
+        margin-right: 5px;
         background-repeat: no-repeat;
 
     }
-    #btn-mobile:hover {
-        width:  35px;
-    
-    }
+   
     .menu {
         display: none;
         
@@ -207,9 +205,10 @@ button:hover {
         margin: 10px;
         border-bottom: 2px solid rgba(0, 0,  0, 0.05);
     }
-    .menu > li:hover {
+    .menu > li a:hover {
         background-color: rgb(217, 241, 232);
         border-radius: 0px 0px 5px 5px;
+        padding:10px 120px 10px 10px;
     }
 
     .menu > li > a {

@@ -1,62 +1,15 @@
-/* * {
-    margin:0%;    
-}
-
+/* Corpo Calculadora*/
 main {
+    background-color:#1BFA69;
     display: flex;
     justify-content: center;
 }
 
-header {
-    background-color: rgb(46, 42, 42);
-    padding: 10px 30px 10px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-.nav {
-    height: 70px;
-    display: flex;    
-    justify-content: space-between;
-}
-#btn-mobile {
-    display: none;
-}
-
-.menu {    
-    margin-bottom: 15px;    
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 0.5rem;
-}
-
-
-a {
-    color: rgb(247, 236, 236);
-    text-decoration: none;
-    font-family: sans-serif;
-}
-a:hover {
-    background: rgba(250, 247, 247, 0.25);
-    padding: 5px;
-    border-radius: 5px;
-}
-nav ul {
-    list-style: none;
-}
-
-.logo {
-    width: 50px;
-}*/
-
-/* Corpo Calculadora*/
-
 .conteinercalculadora {
     margin-top: 20px;
     background-color: aqua;
-    max-width: 300px;
+    max-width: 400px;
+    min-width: 250px;
     height: 400px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.30) 2px 2px 2.6px;

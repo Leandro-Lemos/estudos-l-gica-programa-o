@@ -1,23 +1,18 @@
 
-body {
-    background-color: brown;
-    display:flex;
-    align-items: center;
+.conteiner {
+    display: flex;
     justify-content: center;
-      
-  
+
 }
 
 
-
 body .caixaPrincipal {
-    background-color: aquamarine;
-    width: 500px;
+    background-color:#1BFA69;
+    width: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    
+    padding: 10px; 
 
 }
 
@@ -27,9 +22,7 @@ body .caixaPrincipal {
     margin: 10px;
     display:flex;
     align-items:center;
-    justify-content: space-around;
-    
-    
+    justify-content: space-around;   
     
 }
 
@@ -43,3 +36,22 @@ body .caixaPrincipal {
    
 
 }
+
+footer {    
+    font-family: var(--fontePadrão);
+    font-size: 0.8em;
+    color: bisque;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.footer {
+    max-width: 280px;
+    background-color:rgb(46, 42, 42); 
+    padding: 10px 15px 10px 15px;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -10px;
+}
+
