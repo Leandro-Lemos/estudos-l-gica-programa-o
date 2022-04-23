@@ -64,16 +64,14 @@ nav ul {
         display: block;
         background-color:transparent;
         border: none;
-        background-image: url(./imagens/menuhamburguer.png);
+        background-image: url(../imagens/menuhamburguer.png);
         height: 50px;
-        width: 50px;
+        width: 30px;
+        margin-right: 5px;
         background-repeat: no-repeat;
 
     }
-    #btn-mobile:hover {
-        width:  35px;
     
-    }
     .menu {
         display: none;
         position: absolute;
