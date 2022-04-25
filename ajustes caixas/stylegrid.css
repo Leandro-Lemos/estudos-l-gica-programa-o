@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+    display:grid;
+    grid-template-areas:
+    "header header" /* os nomes poder ser outros*/
+    "main aside"
+    "footer footer";
+    /* na prática isso tornou o main flexível e as demais fixas*/
+    grid-template-rows: 30px 1fr 40px; /* primeira linha fixa, segunda flexível e terceira fixa*/
+    grid-template-columns: 1fr 80px; /* primeira coluna flexível e a outra fixa em 80px*/
+}
+
+.topo_pagina {
+    grid-area:header;
+    background-color:green;
+}
+
+main {
+    grid-area: header;
+    background-color: red;
+}
+
+aside {
+    grid-area:main;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background: black;
+}
+
+p {
+    color: white; 
+}

@@ -1,0 +1,81 @@
+>>>> Posicionamento--------------------------- 
+> padrão: tipo block e um abaixo do outro (static);
+
+> relative --- ativa funções "top", "right", "botton", "z-index" do elemento em questão selecionado. 
+
+> absolute --- é como se tivesse criado uma nova camada de layout para aquele elemento. Ela se posiciona em relação a toda a página "body" ou ao elemento pai ex, "main". Ativa funções "top", "right", "botton", "z-index". 
+
+> fixed --- fixar elemento para não seguir rolagem da página. 
+
+> Sobreposição camadas > O z-index padrão é o último elemento se sobrepondo aquele acima, mas se alterar  o valor de Z- index para camadas superiores aí o elemento pode ficar no "topo". 
+
+
+Flex- Box -------------------------------------
+
+> padrão: tipo block com disposição vertical 
+
+> display: flex --- torna a disposição horizontal.
+
+> flex-direction: column --- volta os elementos a disposição coluna. 
+
+
+
+
+
+
+Anotação extra questão de alinhamento ao centro;
+body {
+    height:100vh; (100% da tela)
+    margin:0;
+    display:flex;
+    align-items:center
+}
+
+.conteiner {
+    width: 100vh;
+    display:flex;
+    justify-content:center;
+}
+
+
+GRID ---------------------------------
+
+Criar colunas ou linhas
+
+>>>> A medidas como por exemplo 1fr são flexíveis. 
+
+--- Exemplo de um grid:
+body {
+    height:100 vh;
+    display:grid;
+    grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-rows: 30px 1fr 40px;
+    grid-template-columns: 1fr 80px;
+}
+
+header {
+    grid-area:header;
+    background-color:green;
+}
+
+main {
+    grid-area: header;
+    background-color: red;
+}
+
+aside {
+    grid-area:main;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background: black;
+}
+
+p {
+    color: white; 
+}
