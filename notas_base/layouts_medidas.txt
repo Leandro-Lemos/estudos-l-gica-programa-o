@@ -23,6 +23,7 @@ Flex- Box -------------------------------------
 
 
 
+
 Anotação extra questão de alinhamento ao centro;
 body {
     height:100vh; (100% da tela)
@@ -39,10 +40,36 @@ body {
 
 
 GRID ---------------------------------
+O grid é interessante para montar a estrutura geral em linhas e colunas. É possível depois ajustes mais finos com flex-box. 
 
 Criar colunas ou linhas
 
 >>>> A medidas como por exemplo 1fr são flexíveis. 
+
+--- grid -template-columns: 3fr 1fr (ocupa 3 porções e 1 porção da tela)
+
+--- grid-template-rows:20vh 70vh 10vh (aqui são porções da tela, mas poderia usar fr também)
+
+--- grid-gap: 20px 5px (20px de espaço horizontal e 5 vertical, se deixar apenas 20px aplica igual nas duas dimensões)
+
+--- Dispor itens considerando colunas e linhas:
+Exemplo para um item avançar mais colunas num conteiner com duas colunas:
+header {
+    grid-column-start 1;
+    grid-column-end:3;
+}
+É como se header avançasse até o final da linha virtual vertical 3, que o final da coluna 02. 
+
+É possível simplificar com: 
+header {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+Pode ser ainda mais simples usando o >>> Grid template areas como no exemplo abaixo. É como distribuir repetindo os nomes por quais colunas deve ocupar. 
+
+Alinhamento do item em relação a div que ele corresponde:
+justify-self:end; (final do da div a direita)
 
 --- Exemplo de um grid:
 body {
@@ -79,3 +106,11 @@ footer {
 p {
     color: white; 
 }
+
+>>> Alinhamento do GRID
+Alinhando a DIV com o grid base em relação ao espaço da tela, por exemplo "body"
+-- justify-content:alinha horizontal em relação ao espaço vazio.
+-- align-itens: alinha vertical. (start, center, end)
+
+
+
