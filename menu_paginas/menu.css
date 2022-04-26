@@ -9,7 +9,7 @@
 :root {
     --fontePadrão:'Roboto', sans-serif;
     --fonteExtra: 'Bebas Neue', cursive;
-
+    --corVerdeContainerbase: #1BFA69;
 }
 body {   
     min-height: 100vw; 
@@ -59,6 +59,22 @@ nav ul {
     width: 50px;
 }
 
+footer {    
+    font-family: var(--fontePadrão);
+    font-size: 0.8em;
+    color: bisque;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+.footer {
+    max-width: 280px;
+    background-color:rgb(46, 42, 42); 
+    padding: 10px 15px 10px 15px;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -10px;
+}
 @media (max-width: 600px){
     #btn-mobile {
         display: block;

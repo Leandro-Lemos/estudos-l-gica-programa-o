@@ -1,4 +1,10 @@
->>>> Posicionamento--------------------------- 
+>>>> Pontos de quebra de tela úteis: --------------
+Disp. móveis: 320px / 480px
+tablets: 481px / 768px
+laptops:769 px / 1279px
+desktops e tvs: 1279 e acima
+
+>>>> Posicionamento--------------------------------- 
 > padrão: tipo block e um abaixo do outro (static);
 
 > relative --- ativa funções "top", "right", "botton", "z-index" do elemento em questão selecionado. 

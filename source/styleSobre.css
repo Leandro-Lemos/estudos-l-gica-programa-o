@@ -1,0 +1,49 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin:0%;    
+}
+
+
+:root {
+    --fontePadrão:'Roboto', sans-serif;
+    --fonteExtra: 'Bebas Neue', sans-serif;
+    --corVerdeContainerbase: #1BFA69;
+    --corClaraConteudoprincipal: aliceblue;
+    --sombraPadrão: rgba(0, 0, 0, 0.30) 2px 2px 2.6px;
+    --bordaPadrão: 10px;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    background-color: var(--corVerdeContainerbase);
+    max-width: 600px;   
+    padding: 30px;
+    line-height: 1.3rem;
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.textoSobre {
+    background-color: var(--corClaraConteudoprincipal);
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: var(--sombraPadrão);
+    border-radius: var(--bordaPadrão);
+}
+h1 {
+    font-family: var(--fonteExtra);
+    letter-spacing: 1px;
+}
+
+.textoSobre p {
+    font-family: var(--fontePadrão);
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 1.2rem;
+}
