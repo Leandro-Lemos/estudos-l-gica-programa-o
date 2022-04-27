@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas_arrays</title>
+    <link rel="stylesheet" href="../menu_paginas/menu.css">
+    <link rel="stylesheet" href="style_lista.css">
+    <script src="../menu_paginas/menu.js" defer></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../imagens/icone_infinito.png" alt="imagem_logo">
+        <nav id="nav">
+            <button id="btn-mobile"></button>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../source/sobre.html">Sobre</a></li>
+                <li><a href="../ajustes caixas/caixas.html">Layout Flex/Grid</a></li>
+                <li><a href="#">Categoria Arrays</a></li>
+                <li><a href="#">Categoria Laços</a></li>
+                <li><a href="../exemplo_ event_listener/basehtml.html">event_listener</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="conteiner">
+            <h1> Faça sua lista de compras</h1>
+            <div class="conteiner_inputs">                
+                <div><label for="larguraMetros">Digite o nome do produto:</label>
+                <input type="text" id="campoLargura" class="descricaoProduto" size="1" /><br></div>
+                <div><label for="comprimentoMetros">Digite o valor:</label>
+                <input type="number" id="campoComprimento" class="valor_campo_numero" size="1" /><br></div>
+                <div><label for="comprimentoMetros">Digite a quantidade:</label>
+                <input type="number" id="campoComprimento" class="valor_campo_numero" size="1" /><br></div>
+            </div>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Valor</th>
+                        <th>Quantidade</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="description">Arroz</td>
+                        <td class="expense">R$ 10,00</td>
+                        <td class="quantidade">5</td>
+                        <td>
+                            <img src="../imagens/minus.svg" alt="remover transação">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="description">Banana</td>
+                        <td class="income">R$ 50,00</td>
+                        <td class="quantidade">2</td>
+                        <td>
+                            <img src="../imagens/minus.svg" alt="remover transação">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="description">Óleo</td>
+                        <td class="expense"> 50,00</td>
+                        <td class="quantidade">5</td>
+                        <td>
+                            <img src="../imagens/minus.svg" alt="remover transação">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <nav class="footer">
+            <p>Projeto - Aprendendo sobre layout e lógica</p>
+        </nav>
+        
+    </footer>
+</body>
+</html>

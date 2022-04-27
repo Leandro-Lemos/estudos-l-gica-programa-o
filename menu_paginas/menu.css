@@ -10,6 +10,7 @@
     --fontePadrão:'Roboto', sans-serif;
     --fonteExtra: 'Bebas Neue', cursive;
     --corVerdeContainerbase: #1BFA69;
+    --corClaraDivConteudo: aliceblue; 
 }
 body {   
     min-height: 100vw; 
