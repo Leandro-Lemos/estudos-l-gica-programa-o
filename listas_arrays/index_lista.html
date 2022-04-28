@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../menu_paginas/menu.css">
     <link rel="stylesheet" href="style_lista.css">
     <script src="../menu_paginas/menu.js" defer></script>
+    <script src="logica_lista.js"></script>
 </head>
 <body>
     <header>
@@ -30,16 +31,21 @@
             <h1> Faça sua lista de compras</h1>
             <div class="conteiner_inputs">                
                 <div><label for="larguraMetros">Digite o nome do produto:</label>
-                <input type="text" id="campoLargura" class="descricaoProduto" size="1" /><br></div>
+                <input type="text" id="campoNomeProduto" class="descricaoProduto" size="1" /><br></div>
                 <div><label for="comprimentoMetros">Digite o valor:</label>
                 <input type="number" id="campoComprimento" class="valor_campo_numero" size="1" /><br></div>
                 <div><label for="comprimentoMetros">Digite a quantidade:</label>
                 <input type="number" id="campoComprimento" class="valor_campo_numero" size="1" /><br></div>
             </div>
+            <button type="submit" onclick="InserirProduto()">Inserir</button>
+            <button type="submit" onclick="imprimirLista()">Imprimir</button>
+            <section class="listaimpressa">
+                <h2 id="listaCompleta"></h2>
+            </section>
             <table id="data-table">
                 <thead>
                     <tr>
-                        <th>Produto</th>
+                        <th><p id="nomeProdutoTabela"></p></th>
                         <th>Valor</th>
                         <th>Quantidade</th>
                         <th></th>
