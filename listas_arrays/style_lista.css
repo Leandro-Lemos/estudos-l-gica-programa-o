@@ -9,6 +9,7 @@
     --fonteExtra: 'Bebas Neue', cursive;
     --corVerdeContainerbase: #1BFA69;
     --corClaraDivConteudo: aliceblue; 
+    --corAzulEscuro: #171c31;
 }
 body {
     background-color: var(--corVerdeContainerbase);
@@ -35,19 +36,39 @@ main {
     margin:10px
 }
 .conteiner_inputs {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: var(--fontePadrão);
+    font-size: 1.2rem; 
+}
 
-}
-.valor_campo_numero {
-    max-width: 50px;
-}
 input {
-    width: 10rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    min-width: 12rem;
+}
+.btnInserir {
+    font-family: var(--fontePadrão);
+    color: rgb(248, 248, 248);
+    margin: 10px 0px;
+    font-size: 1.2rem;
+    background-color: rgb(2, 175, 2);
+    border-radius: 4px;
 }
 
+.btnCancelar {
+    font-family: var(--fontePadrão);
+    color: rgb(248, 248, 248);
+    margin: 10px 0px;
+    font-size: 1.2rem;
+    background-color: rgb(243, 32, 32);
+    border-radius: 4px;
+}
+
+button:hover {
+    font-size: 1.3rem;
+}
 
 #transaction {
     display: block;
@@ -57,15 +78,21 @@ input {
 }
 #data-table {
     width: 100%;
-    border-spacing: 0 0.5rem;
-    color: var(--dark-blue);    
+    color: var(--dark-blue);
+    border-collapse: collapse; 
+    margin-top: 10px;
+
 }
 
 table th {
     background-color: white;
-    color:#969cb3;
-    padding: 1rem 2rem;
+    color:var(--corAzulEscuro);
+    padding: 0.3rem 1rem;
     text-align: left;
+    border: 1px solid black;
+}
+table td {
+    border: 1px solid black;
 }
 
 table tbody tr {
@@ -77,12 +104,9 @@ table tr:hover {
        
 }
 
-
-
-
 table td {
     background-color: white;
-    padding: 1rem 2rem ;
+    padding: 0.1rem 1rem ;
     font-weight: normal;
 }
 
@@ -97,9 +121,7 @@ table tbody tr td:last-child {
     border-radius: 0 0.25rem 0.25rem 0 ;
 }
 
-td.description {
-    color: var(--dark-blue)
-}
+
 td.income {
     color: #12a454;
 
@@ -107,4 +129,28 @@ td.income {
 
 td.expense {
     color: #e92929
+}
+
+@media only screen and (max-width: 600px){
+
+    .container {
+        max-width: 320px;       
+        margin: auto;
+    }
+
+    .responsive thead tr th {
+        font-size: 1.2em ;
+    }
+
+    .responsive th, .responsive tr {
+        font-size: 0.5em;  
+        text-align: left;          
+       
+    }
+    table td {
+    background-color: white;
+    font-weight: normal;
+    } 
+
+     
 }

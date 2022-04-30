@@ -1,36 +1,17 @@
-const listaCompras = []
+/*Essa é a classe produto com as caracteristicas e métodos/funções ligadas a ela */
+class Produto {
 
-function InserirProduto() {
-    var nomeProduto= (document.getElementById("campoNomeProduto").value);
-    var agregarProdutoLista = listaCompras.push(nomeProduto);
-}
+    constructor() {
 
-function imprimirLista() {
-var listaCompleta= document.getElementById("listaCompleta");
-    listaCompleta.innerHTML = "O resultado é" + listaCompras;
-}
-
-
-
-
-
-
-
-
-function ConverterArea() {
-    var valorMetros = parseFloat(document.getElementById("valor").value);
-    var valorAlqueires = Math.floor(valorMetros / 24200);
-    var valorLitros = (valorMetros % 24200)/605;
-    var valorHectare = valorMetros/10000;
-    
-    var resultadoAlqueire = document.getElementById("valorConvertidoAlqueire");
-    var resultadoLitros = document.getElementById("valorConvertidoLitros");
-    var resultadoConversão = " O resultado de " + "<br>"+ valorMetros + " m² é " + valorAlqueires + " alqueires e " + valorLitros.toFixed(1) + " litros ou " + valorHectare.toFixed(2) + " hectares";
-    if (valorAlqueires >= 1) {
-    resultadoAlqueire.innerHTML = resultadoConversão}
-    else {
-        resultadoAlqueire.innerHTML= "O resultado de " + valorMetros + " m² é " + valorLitros.toFixed(2) + " litros ou " + valorHectare.toFixed(2) + " hectares"
     }
 
- 
+
+adicionar() {
+    alert('clicou pra salvar');
 }
+excluir() {
+    alert('excluiu o produto');
+}
+}
+
+var produto = new Produto(); /* váriavel de para criar um novo produto e que é passada no evento onclick para acessar a classee produto*/

@@ -19,8 +19,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../source/sobre.html">Sobre</a></li>
                 <li><a href="../ajustes caixas/caixas.html">Layout Flex/Grid</a></li>
-                <li><a href="#">Categoria Arrays</a></li>
-                <li><a href="#">Categoria Laços</a></li>
+                <li><a href="../projeto_calculadora/basecalculadora.html">Calculadora</a>
                 <li><a href="../exemplo_ event_listener/basehtml.html">event_listener</a></li>
             </ul>
         </nav>
@@ -30,52 +29,31 @@
         <div class="conteiner">
             <h1> Faça sua lista de compras</h1>
             <div class="conteiner_inputs">                
-                <div><label for="larguraMetros">Digite o nome do produto:</label>
-                <input type="text" id="campoNomeProduto" class="descricaoProduto" size="1" /><br></div>
-                <div><label for="comprimentoMetros">Digite o valor:</label>
-                <input type="number" id="campoComprimento" class="valor_campo_numero" size="1" /><br></div>
-                <div><label for="comprimentoMetros">Digite a quantidade:</label>
-                <input type="number" id="campoComprimento" class="valor_campo_numero" size="1" /><br></div>
+                <div><label for="nomeProduto">Digite o nome do produto:</label></div>
+                <div><input type="text" id="campoNomeProduto" class="descricaoProduto" size="1" placeholder="Nome produto"/>
+                </div>
+                <div><label for="comprimentoMetros">Digite o valor:</label></div>
+                <div><input type="number" id="campoValorProduto" class="valor_campo_numero" size="1" placeholder="Valor do produto"/></div>
+                <div><label for="comprimentoMetros">Digite a quantidade:</label></div>
+                <div><input type="number" id="campoQuantidadeProduto" class="valor_campo_numero" size="1" placeholder="Quantidade"/></div>
             </div>
-            <button type="submit" onclick="InserirProduto()">Inserir</button>
-            <button type="submit" onclick="imprimirLista()">Imprimir</button>
+            <button class="btnInserir" type="submit" onclick="produto.adicionar()">Adicionar</button>
+            <button class="btnCancelar" type="submit" onclick="produto.excluir()">Cancelar</button>
             <section class="listaimpressa">
                 <h2 id="listaCompleta"></h2>
             </section>
-            <table id="data-table">
+            <table id="data-table" class="responsive">
                 <thead>
                     <tr>
-                        <th><p id="nomeProdutoTabela"></p></th>
+                        <th>ID</th>
+                        <th><p id="nomeProdutoTabela">Produto</p></th>
                         <th>Valor</th>
                         <th>Quantidade</th>
-                        <th></th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="description">Arroz</td>
-                        <td class="expense">R$ 10,00</td>
-                        <td class="quantidade">5</td>
-                        <td>
-                            <img src="../imagens/minus.svg" alt="remover transação">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Banana</td>
-                        <td class="income">R$ 50,00</td>
-                        <td class="quantidade">2</td>
-                        <td>
-                            <img src="../imagens/minus.svg" alt="remover transação">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Óleo</td>
-                        <td class="expense"> 50,00</td>
-                        <td class="quantidade">5</td>
-                        <td>
-                            <img src="../imagens/minus.svg" alt="remover transação">
-                        </td>
-                    </tr>
+                <tbody id="tbodyTabela">
+                   
                 </tbody>
             </table>
         </div>
