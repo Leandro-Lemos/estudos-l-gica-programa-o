@@ -2,7 +2,7 @@ Atalho multi seleção >>> alt+ shift + setas
 
 # Git e Git hub
 
-para clonar um repositório>>> git clone 
+para clonar um repositório>>> git clone + chave ssh ou link
 
 Branches
 para saber em qual branch se está >> git branch

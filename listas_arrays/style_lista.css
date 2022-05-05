@@ -27,7 +27,7 @@ main {
 .conteiner {
     display: block;
     background-color: var(--corClaraDivConteudo);
-    max-width: 600px;
+    max-width: 320px;
     padding: 30px;
     border-radius: 2px;
 }
@@ -87,13 +87,14 @@ button:hover {
 table th {
     background-color: white;
     color:var(--corAzulEscuro);
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.8rem;
     text-align: left;
     border: 1px solid black;
 }
 table td {
     border: 1px solid black;
 }
+
 
 table tbody tr {
     opacity: 0.7;
@@ -109,7 +110,9 @@ table td {
     padding: 0.1rem 1rem ;
     font-weight: normal;
 }
-
+thead tr th {
+    font-size: 0.8em ;
+}
 
 table thead tr th:first-child,
 table tbody tr td:first-child {
@@ -138,9 +141,7 @@ td.expense {
         margin: auto;
     }
 
-    .responsive thead tr th {
-        font-size: 1.2em ;
-    }
+    
 
     .responsive th, .responsive tr {
         font-size: 0.5em;  
