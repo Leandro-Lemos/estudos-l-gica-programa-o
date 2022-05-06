@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../menu_paginas/menu.css">
     <link rel="stylesheet" href="style_lista.css">
     <script src="../menu_paginas/menu.js" defer></script>
-    <script src="logica_lista.js"></script>
+    <script src="logica_lista.js" defer></script>
 </head>
 <body>
     <header>
@@ -37,7 +37,7 @@
                 <div><label for="comprimentoMetros">Digite a quantidade:</label></div>
                 <div><input type="number" id="campoQuantidadeProduto" class="valor_campo_numero" size="1" placeholder="Quantidade"/></div>
             </div>
-            <button class="btnInserir" type="submit" onclick="produto.adicionar()">Adicionar</button>
+            <button class="btnInserir" type="submit" onclick="produto.salvar()">Adicionar</button>
             <button class="btnCancelar" type="submit" onclick="produto.excluir()">Cancelar</button>
             <section class="listaimpressa">
                 <h2 id="listaCompleta"></h2>
