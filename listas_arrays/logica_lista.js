@@ -13,8 +13,28 @@ class Produto {
         if (this.validaCampos(produto)==true) {//para chamar a função passando o produto, por padrão considerar ( se validaCampos for verdadeiro true )
             this.adicionar(produto); // se validou o campo chama o método adicionar
         }
-        console.log(this.arrayProdutos);
+        this.listaTabela(); //chama a função que cria a tabela no js
     }
+
+    listaTabela() {// criando elementos da tabela dinâmicamente no js
+        let tbody = document.getElementById("tbodyTabela");
+        tbody.innerText = ''; // inicia o tbody vazio para evitar duplicar o cadastro do item ao inserir um novo
+
+        for(let i = 0; i < this.arrayProdutos.length; i++) {
+            let tr = tbody.insertRow(); //cria uma linha
+            let td_id = tr.insertCell(); //cria uma coluna
+            let td_nomeProduto= tr.insertCell();
+            let td_valor = tr.insertCell();
+            let td_Quantidade = tr.insertCell();
+            let td_acoes = tr.insertCell();
+
+            td_id.innerText = this.arrayProdutos[i].id; // atribuindo o elemento com o índice do array, posição dos elemento i incrementado -- o .id foi criado dentro de>> lerDados
+            td_nomeProduto.innerText = this.arrayProdutos[i].nomeProduto;
+            td_valor.innerText = this.arrayProdutos[i].valorProduto;
+            td_Quantidade.innerText = this.arrayProdutos[i].quantidadeProduto;
+            
+        };
+    };
 
     adicionar(produto) {//metodo que é chamado ao validar e salvar
         this.arrayProdutos.push(produto); //adicionar elemento produto dentro do array vazio
