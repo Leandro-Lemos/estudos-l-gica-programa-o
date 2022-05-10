@@ -14,6 +14,7 @@ class Produto {
             this.adicionar(produto); // se validou o campo chama o método adicionar
         }
         this.listaTabela(); //chama a função que cria a tabela no js
+        this.cancelar(); // chama essa função para limpar os campos e não duplicar ao cadastrar novo item
     }
 
     listaTabela() {// criando elementos da tabela dinâmicamente no js
@@ -28,11 +29,21 @@ class Produto {
             let td_Quantidade = tr.insertCell();
             let td_acoes = tr.insertCell();
 
+        
+            
+
             td_id.innerText = this.arrayProdutos[i].id; // atribuindo o elemento com o índice do array, posição dos elemento i incrementado -- o .id foi criado dentro de>> lerDados
             td_nomeProduto.innerText = this.arrayProdutos[i].nomeProduto;
             td_valor.innerText = this.arrayProdutos[i].valorProduto;
             td_Quantidade.innerText = this.arrayProdutos[i].quantidadeProduto;
-            
+            // menu ações com imagens
+            let imgEdit = document.createElement('img');
+            imgEdit.src = '../imagens/minus.svg';
+            imgEdit.width = 15;
+            imgEdit.height = 15;
+            imgEdit.classList.add('hover');
+
+            td_acoes.appendChild(imgEdit); // coloca como filha da tag td ações
         };
     };
 
@@ -73,9 +84,12 @@ class Produto {
 
     }
 
-    excluir() {
-        alert('excluiu o produto');
+    cancelar() {
+       document.getElementById('campoNomeProduto').value = ''; 
+       document.getElementById('campoValorProduto').value = ''; 
+       document.getElementById('campoQuantidadeProduto').value = ''; 
     }  
+
 }
 
 var produto = new Produto(); /* váriavel para criar um novo produto e que é passada no evento onclick para acessar a classe produto*/
