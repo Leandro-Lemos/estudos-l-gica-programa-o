@@ -38,12 +38,20 @@ class Produto {
             td_Quantidade.innerText = this.arrayProdutos[i].quantidadeProduto;
             // menu ações com imagens
             let imgEdit = document.createElement('img');
-            imgEdit.src = '../imagens/minus.svg';
-            imgEdit.width = 15;
-            imgEdit.height = 15;
-            imgEdit.classList.add('hover');
+            imgEdit.src = '../imagens/btneditar.png';
+            imgEdit.width = 20;
+            imgEdit.height = 20;
+            
 
-            td_acoes.appendChild(imgEdit); // coloca como filha da tag td ações
+            let imgdelete = document.createElement('img');
+            imgdelete.src = '../imagens/btnlixeira.png';
+            imgEdit.width = 20;
+            imgEdit.height = 20;
+            imgdelete.setAttribute("onclick", "produto.deletar("+ this.arrayProdutos[i].id +")"); // insere atributo na variável que criou a imagem com os dois parametros: evento + função criada dentro de objeto produto >> +this.arrayProdutos[i].id + concatena para deletar por ID. 
+            
+
+            td_acoes.appendChild(imgEdit); //coloca como filha da tag td ações
+            td_acoes.appendChild(imgdelete);
         };
     };
 
@@ -89,6 +97,10 @@ class Produto {
        document.getElementById('campoValorProduto').value = ''; 
        document.getElementById('campoQuantidadeProduto').value = ''; 
     }  
+
+    deletar(id) { //considera o parâmetro id
+        alert('clicou delete');
+    }
 
 }
 
