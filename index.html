@@ -66,20 +66,22 @@
               </div>
 
               <div class="conversorTerreno">
-                <h2>Conversor Medidas Exemplo3 </h2> 
+                <h2>Caixa de Registro</h2> 
                 <section class="conversorTerrenoFormQuestions">
                     <div>
-                        <p>Converta metros quadrados para Alqueire:</p>
+                        <p>Insira os valores da operação</p>
                     </div>
-                        <div><label for="medidaMetros">Insira o valor em m²:</label><br></div>
-                        <div><input type="number" id="valor" class="valorCampo" size="2" /><br></div>
-                        <button type="submit" onclick="Converter()">Converter</button>
+                        <div><label for="valorDinheiro">Dinheiro:</label><br></div>
+                        <div><input type="number" id="valorDinheiro" class="valorDinheiro" size="2" /><br></div>
+                        <div><label for="valorProduto">Valor Produto:</label><br></div>
+                        <div><input type="number" id="valorProduto" class="valorProduto" size="2" /><br></div>
+                        <button type="submit" onclick="operacaoTroco()">Converter</button>
                         <button type="submit" onclick="LimparCampos()">Limpar</button>
                 </section>
                 <p>Resultado</p>
-                <section class="resultado">
-                    <h2 id="valorConvertidoalqueire"></h2>
-                    <h2 id="valorConvertidolitros"></h2>
+                <section class="resultadoOperacao">
+                    <h3 id="valorDinheiroEntregue"></h3>
+                    <h3 id="valorTroco"></h3>
                 </section>
               </div>
               

@@ -19,16 +19,7 @@ function ConverterAreaValor() {
     var resultadoAreaValor = " O terreno tem área de " + areaTerreno + " m² e seu valor total é de " + valorTerreno + " R$";
 
     resultadoAreaTerreno.innerHTML = resultadoAreaValor
-
 }
-
-
-
-
-
-
-
-
 
 function ConverterArea() {
     var valorMetros = parseFloat(document.getElementById("valor").value);
@@ -38,12 +29,27 @@ function ConverterArea() {
     
     var resultadoAlqueire = document.getElementById("valorConvertidoAlqueire");
     var resultadoLitros = document.getElementById("valorConvertidoLitros");
-    var resultadoConversão = " O resultado de " + "<br>"+ valorMetros + " m² é " + valorAlqueires + " alqueires e " + valorLitros.toFixed(1) + " litros ou " + valorHectare.toFixed(2) + " hectares";
+    var resultadoConversão = " O resultado de " + "<br>"+ valorMetros + " m² é " + valorAlqueires + " alqueires e " + valorLitros.toFixed(1) + " litros ou " + valorHectare.toFixed(3) + " hectares";
     if (valorAlqueires >= 1) {
     resultadoAlqueire.innerHTML = resultadoConversão}
     else {
-        resultadoAlqueire.innerHTML= "O resultado de " + valorMetros + " m² é " + valorLitros.toFixed(2) + " litros ou " + valorHectare.toFixed(2) + " hectares"
-    }
+        resultadoAlqueire.innerHTML= "O resultado de " + valorMetros + " m² é " + valorLitros.toFixed(3) + " litros ou " + valorHectare.toFixed(3) + " hectares"
+    } 
+}
 
- 
+function operacaoTroco() {
+    var valorDinheiro = parseFloat(document.getElementById("valorDinheiro").value);
+    var valorProduto = parseFloat(document.getElementById("valorProduto").value);
+    var valorTroco = valorDinheiro - valorProduto;
+
+    var dinheiroEntregue = document.getElementById("valorDinheiroEntregue");
+    var troco = document.getElementById("valorTroco");
+
+    var resultadoOperacao = `Dinheiro:R$ ${valorDinheiro.toFixed(2)}<br>Troco: R$ ${valorTroco.toFixed(2)}`;
+
+    dinheiroEntregue.innerHTML = resultadoOperacao;
+
+
+
+
 }
