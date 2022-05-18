@@ -27,7 +27,7 @@ main {
 .conteiner {
     display: block;
     background-color: var(--corClaraDivConteudo);
-    max-width: 320px;
+    max-width: 380px;
     padding: 30px;
     border-radius: 2px;
 }
@@ -103,11 +103,13 @@ table tbody tr {
 
 table td {
     background-color: white;
-    padding: 0.1rem 1rem ;
+    padding: 0.1rem 0rem ;
     font-weight: normal;
+    text-align: center;
+    font-size: 0.9em ;
 }
 thead tr th {
-    font-size: 0.8em ;
+    font-size: 0.9em ;
 }
 
 table thead tr th:first-child,
@@ -137,15 +139,17 @@ td.expense {
 @media only screen and (max-width: 600px){
 
     .container {
-        max-width: 320px;       
+        max-width: 280px;       
         margin: auto;
+        padding: 3px;
     }
 
     
 
     .responsive th, .responsive tr {
-        font-size: 0.5em;  
-        text-align: left;          
+        font-size: 0.8em;  
+        text-align: center; 
+        padding: 0px;         
        
     }
     table td {

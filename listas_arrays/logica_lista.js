@@ -99,7 +99,17 @@ class Produto {
     }  
 
     deletar(id) { //considera o parâmetro id
-        alert('clicou delete');
+
+        let tbody = document.getElementById("tbodyTabela"); // insere a variavel no escopo para deletar os dados da linha ligada ao ID
+
+        for ( let i = 0; i < this.arrayProdutos.length; i++ )/* percorre o array*/ {
+            if (this.arrayProdutos[i].id == id) /* compara o i com o id*/ {
+                this.arrayProdutos.splice(i,1);
+                //deleta o i e apenas 1 registro > deleta apenas o id
+                tbody.deleteRow(i); // deleta a linha/conteúdo considerando o id
+            }
+        }
+        
     }
 
 }
