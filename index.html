@@ -56,7 +56,6 @@
                         <div><label for="medidaMetros">Insira o valor em m²:</label><br></div>
                         <div><input type="number" id="valor" class="valorCampo" size="2" /><br></div>
                         <button type="submit" onclick="ConverterArea()">Converter</button>
-                        <button type="submit" onclick="LimparCampos()">Limpar</button>
                 </section>
                 <p>Resultado</p>
                 <section class="resultado">
@@ -71,17 +70,16 @@
                     <div>
                         <p>Insira os valores da operação</p>
                     </div>
-                        <div><label for="valorDinheiro">Dinheiro:</label><br></div>
-                        <div><input type="number" id="valorDinheiro" class="valorDinheiro" size="2" /><br></div>
-                        <div><label for="valorProduto">Valor Produto:</label><br></div>
-                        <div><input type="number" id="valorProduto" class="valorProduto" size="2" /><br></div>
-                        <button type="submit" onclick="operacaoTroco()">Converter</button>
-                        <button type="submit" onclick="LimparCampos()">Limpar</button>
+                            <div><label for="valorDinheiro">Dinheiro:</label><br></div>
+                            <div><input type="number" id="valorDinheiro" class="valorDinheiro" size="2" placeholder="0,00" required/><br></div>
+                            <div><label for="valorProduto">Valor Produto:</label><br></div>
+                            <div><input type="number" id="valorProduto" class="valorProduto" size="2" placeholder="0,00" required/><br></div>
+                            <button type="submit" onclick="operacaoTroco()">Calcular</button>                        
                 </section>
                 <p>Resultado</p>
-                <section class="resultadoOperacao">
-                    <h3 id="valorDinheiroEntregue"></h3>
-                    <h3 id="valorTroco"></h3>
+                <section class="resultado">
+                    <h2 id="valorDinheiroEntregue"></h2>
+                    <h2 id="valorTroco"></h2>
                 </section>
               </div>
               

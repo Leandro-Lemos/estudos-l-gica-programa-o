@@ -60,13 +60,7 @@ nav ul {
 .logo {
     width: 50px;
 }
-body h2 {
-    text-align: center;
-    color: rgb(1, 71, 71);
-    font-family: var(--fontePadrão);
-    font-size: 1em;
-    
-}
+
 
 .conteiner {
     background-color:#1BFA69;
@@ -88,13 +82,12 @@ body h2 {
 .resultado {
     background-color:#0FFDE9;
     padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--fontePadrão);
+    color: black;
+    font-size: 0.8rem;
 
 }
-.resultado h2 {
-    color: black;
-    text-shadow: none;
-}
+
 
 
 .medida_terreno { 
@@ -168,11 +161,7 @@ button {
 button:hover {
     background-color:rgb(13, 231, 42);
 }
-.resultadoOperacao {
-    display: flex;
-    justify-content: left;
-    text-align: left;
-}
+
 
 @media (max-width: 600px){
     #btn-mobile {

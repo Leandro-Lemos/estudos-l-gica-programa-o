@@ -38,18 +38,22 @@ function ConverterArea() {
 }
 
 function operacaoTroco() {
+    
     var valorDinheiro = parseFloat(document.getElementById("valorDinheiro").value);
     var valorProduto = parseFloat(document.getElementById("valorProduto").value);
     var valorTroco = valorDinheiro - valorProduto;
+    var valorFaltante = (valorDinheiro - valorProduto) * -1;   
+
 
     var dinheiroEntregue = document.getElementById("valorDinheiroEntregue");
     var troco = document.getElementById("valorTroco");
-
-    var resultadoOperacao = `Dinheiro:R$ ${valorDinheiro.toFixed(2)}<br>Troco: R$ ${valorTroco.toFixed(2)}`;
-
-    dinheiroEntregue.innerHTML = resultadoOperacao;
-
-
-
+    if (valorDinheiro < valorProduto) {
+        alert(`Complemente o valor. Faltou R$: ${valorFaltante.toFixed(2)}`)
+    } else {        
+        var resultadoOperacao = `Dinheiro:R$ ${valorDinheiro.toFixed(2)}<br>Troco: R$ ${valorTroco.toFixed(2)}`;
+        dinheiroEntregue.innerHTML = resultadoOperacao;        
+    }
+    
+    
 
 }
