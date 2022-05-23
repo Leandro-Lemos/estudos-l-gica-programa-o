@@ -66,16 +66,18 @@
 
               <div class="conversorTerreno">
                 <h2>Caixa de Registro</h2> 
-                <section class="conversorTerrenoFormQuestions">
-                    <div>
-                        <p>Insira os valores da operação</p>
-                    </div>
-                            <div><label for="valorDinheiro">Dinheiro:</label><br></div>
-                            <div><input type="number" id="valorDinheiro" class="valorDinheiro" size="2" placeholder="0,00" required/><br></div>
-                            <div><label for="valorProduto">Valor Produto:</label><br></div>
-                            <div><input type="number" id="valorProduto" class="valorProduto" size="2" placeholder="0,00" required/><br></div>
-                            <button type="submit" onclick="operacaoTroco()">Calcular</button>                        
-                </section>
+                <form action="" id="formulario">
+                    <section class="conversorTerrenoFormQuestions">
+                        <div>
+                            <p>Insira os valores da operação</p>
+                        </div>
+                                <div><label for="valorDinheiro">Dinheiro:</label><br></div>
+                                <div><input type="number" id="valorDinheiro" class="valorDinheiro" size="2" placeholder="0,00" /><br></div>
+                                <div><label for="valorProduto">Valor Produto:</label><br></div>
+                                <div><input type="number" id="valorProduto" class="valorProduto" size="2" placeholder="0,00" required/><br></div>
+                                <button type="submit" >Calcular</button>
+                    </section>
+                </form>
                 <p>Resultado</p>
                 <section class="resultado">
                     <h2 id="valorDinheiroEntregue"></h2>

@@ -36,24 +36,28 @@ function ConverterArea() {
         resultadoAlqueire.innerHTML= "O resultado de " + valorMetros + " m² é " + valorLitros.toFixed(3) + " litros ou " + valorHectare.toFixed(3) + " hectares"
     } 
 }
+var envioForm = document.getElementById('formulario');
 
-function operacaoTroco() {
+function operacaoTroco(event) {
+
+    event.preventDefault();
     
     var valorDinheiro = parseFloat(document.getElementById("valorDinheiro").value);
     var valorProduto = parseFloat(document.getElementById("valorProduto").value);
     var valorTroco = valorDinheiro - valorProduto;
-    var valorFaltante = (valorDinheiro - valorProduto) * -1;   
+    var valorFaltante = (valorDinheiro - valorProduto) * -1;
+    campoVazio = '';   
 
 
     var dinheiroEntregue = document.getElementById("valorDinheiroEntregue");
     var troco = document.getElementById("valorTroco");
+    
     if (valorDinheiro < valorProduto) {
         alert(`Complemente o valor. Faltou R$: ${valorFaltante.toFixed(2)}`)
-    } else {        
+    }  else {        
         var resultadoOperacao = `Dinheiro:R$ ${valorDinheiro.toFixed(2)}<br>Troco: R$ ${valorTroco.toFixed(2)}`;
         dinheiroEntregue.innerHTML = resultadoOperacao;        
-    }
-    
-    
+    }   
 
 }
+envioForm.addEventListener ('submit', operacaoTroco )
