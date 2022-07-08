@@ -6,7 +6,11 @@ function toggleMenu() {
 btnMobile.addEventListener("click", toggleMenu);
 
 
-function ConverterAreaValor() {
+var envioFormConversaoArea = document.getElementById("formularioConversorArea");
+
+
+function ConverterAreaValor(event) {
+    event.preventDefault();
     var largura = parseFloat(document.getElementById("campoLargura").value);
     var comprimento = parseFloat(document.getElementById("campoComprimento").value);
     var valorMetroQuadrado = parseFloat(document.getElementById("campoValorArea").value)
@@ -20,8 +24,12 @@ function ConverterAreaValor() {
 
     resultadoAreaTerreno.innerHTML = resultadoAreaValor
 }
+envioFormConversaoArea.addEventListener('submit', ConverterAreaValor)
 
-function ConverterArea() {
+var envioFormConversorTerreno = document.getElementById("formularioConversorTerreno");
+function ConverterArea(event) {
+
+    event.preventDefault();
     var valorMetros = parseFloat(document.getElementById("valor").value);
     var valorAlqueires = Math.floor(valorMetros / 24200);
     var valorLitros = (valorMetros % 24200)/605;
@@ -36,8 +44,10 @@ function ConverterArea() {
         resultadoAlqueire.innerHTML= "O resultado de " + valorMetros + " m² é " + valorLitros.toFixed(3) + " litros ou " + valorHectare.toFixed(3) + " hectares"
     } 
 }
-var envioForm = document.getElementById('formulario');
+envioFormConversorTerreno.addEventListener ('submit', ConverterArea )
 
+
+var envioFormCaixa = document.getElementById("formularioCaixa");
 function operacaoTroco(event) {
 
     event.preventDefault();
@@ -60,4 +70,11 @@ function operacaoTroco(event) {
     }   
 
 }
-envioForm.addEventListener ('submit', operacaoTroco )
+envioFormCaixa.addEventListener ('submit', operacaoTroco )
+
+function apagaForm() {
+    
+	document.getElementById("formularioConversorArea").reset();
+	document.getElementById('form2').reset();
+	document.getElementById('form3').reset();
+}
