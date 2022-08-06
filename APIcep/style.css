@@ -1,0 +1,15 @@
+.imagem-carrossel1 {
+    object-fit: cover ; /* como o elemento se comporta em relação ao container pai. Preencher o container mantendo a proporção e cortando o que for necessário*/
+    object-position: 50% 0; /* alinha em eixo x e y*/
+    height:300px;
+}
+
+.imagem-carrossel2 {
+    object-fit: cover ; /* como o elemento se comporta em relação ao container pai. Preencher o container mantendo a proporção e cortando o que for necessário*/
+    object-position: 0 80%; /* alinha em eixo x e y*/
+    height:300px;
+}
+
+p {
+    font-size: ;
+}
