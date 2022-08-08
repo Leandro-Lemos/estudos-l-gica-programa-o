@@ -6,10 +6,17 @@
 
 .imagem-carrossel2 {
     object-fit: cover ; /* como o elemento se comporta em relação ao container pai. Preencher o container mantendo a proporção e cortando o que for necessário*/
-    object-position: 0 80%; /* alinha em eixo x e y*/
+    object-position: 30% 80%; /* alinha em eixo x e y*/
     height:300px;
 }
 
-p {
-    font-size: ;
+.centered {
+    align-items:center;
+    margin: 0 auto !important;
+    float: none !important;
+    max-width: 350px;
+    background-color: rgb(223, 90, 212);
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
 }
