@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Endereço Via API CEP</title>
+  <title>Consulta CEP</title>
   <link rel="stylesheet" href="FetchAPI/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -38,14 +38,16 @@
   </nav>
   <div id="carouselExampleCaptions" class="carousel slide pt-5" data-bs-interval="4000" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="./imagens/imagem_um_carrossel.jpg"  class="d-block w-100 imagem-carrossel2" alt="...">
-        
+        <img src="./imagens/imagem_um_carrossel.jpg" class="d-block w-100 imagem-carrossel2" alt="...">
+
         <div class="carousel-caption d-none d-md-block">
           <h5>Simplifique a sua busca</h5>
           <p class="text-start
@@ -56,13 +58,13 @@
       <div class="carousel-item">
         <img src="./imagens/imagem_dois_carrossel.jpg" class="d-block w-100 imagem-carrossel2" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5> Buscador de CEP  Automático</h5>
+          <h5> Buscador de CEP Automático</h5>
           <p class="text-start
   ">Use nosso buscador e localize seu endereço.</p class="text-start
     ">
         </div>
       </div>
-    
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -75,9 +77,17 @@
   </div>
   <div class="container pt-5 ">
     <!-- pt-5 é uma classe margin top -->
+
+  <h1>Consulta CEP</h1>
+  <div class="btncopy">
+    <input type="text" name="texto" id="texto" placeholder="Digite alguma coisa" value="01311-000" />
+    <button onclick="copiarTexto()">Copiar</button>
+  </div>
+
     <form class="mb-5">
       <!-- Como criar com atalho >>> div.form-group col-6*5>label+input+small -->
-      <div class= "centered">
+      <div class="centered">
+        
         <div class="form-group "><label for="cep">CEP</label><input type="text" class="form-control" maxlength="9"
             id="cep"><small>00000-000</small></div>
         <div class="form-group"><label for="logradouro">Logradouro</label><input type="text" class="form-control"
@@ -86,21 +96,14 @@
             id="bairro"><small></small></div>
         <div class="form-group"><label for="localidade">Localidade</label><input type="text" class="form-control"
             id="localidade"><small></small></div>
-        <div class="form-group "><label for="uf">UF</label><input type="text" class="form-control" id="uf"><small></small>
+        <div class="form-group "><label for="uf">UF</label><input type="text" class="form-control"
+            id="uf"><small></small>
         </div>
       </div>
     </form>
-    <div>
-      <p class="text-start" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet expedita aut libero amet! Eligendi illum, aut
-      </p class="text-start">
-      <p class="text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime saepe odio ducimus aspernatur nam unde qui! Explicabo, ipsam, soluta enim optio quidem, tempore illo cumque nesciunt veniam repudiandae non voluptates.</p class="text-start
-">
-      <p class="text-start"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, omnis pariatur. Labore facere veniam quos animi, sint in obcaecati beatae reiciendis quo eum cum aspernatur dolor deserunt quaerat atque consequuntur.</span><span>Cumque earum veritatis quaerat sed impedit placeat nihil exercitationem deleniti voluptates distinctio est, velit architecto possimus odit laudantium labore repellendus provident doloremque ex quis porro officia, repellat laborum. Libero, tempore?</span><span>Iusto, deserunt sapiente error nam exercitationem dignissimos quo ex consequatur magnam perferendis enim alias illum dolorum inventore voluptatum nihil adipisci iste quisquam consectetur, fuga qui non quos maxime! Quos, accusamus!</span></p class="text-start
-">
-    </div>
 
   </div>
-  
+
   <script src="src/js/main.js"></script>
   <script src="FetchAPI/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

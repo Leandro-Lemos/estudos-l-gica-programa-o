@@ -10,13 +10,48 @@
     height:300px;
 }
 
+h1 {
+    text-align: center;
+}
+
 .centered {
     align-items:center;
     margin: 0 auto !important;
     float: none !important;
     max-width: 350px;
-    background-color: rgb(223, 90, 212);
+    background-color: rgb(245, 250, 249);
     padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.60) 0px 3px 8px;
     border-radius: 5px;
+}
+
+.btncopy {
+    display: flex;
+    justify-content:center;
+    padding: 10px 0 20px 0;
+    
+}
+
+input, button {
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+}
+
+input {
+    background-color: #d4e8ff;
+    color: #06224a;
+    width: 120px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    margin-left: 10px;
+    background-color: #06224a;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
