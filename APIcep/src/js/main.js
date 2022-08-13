@@ -48,20 +48,28 @@ cep.addEventListener("blur", (e) => {
     
 } )
 
-// funções salvar localstorage
+// funções salvar item de forma dinamica
 
 const form = document.getElementById("novoItem")
+const lista = document.getElementById("lista")
+const arrayItens = [] // para agregar os itens de localstorage
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
    // console.log(evento)
-
+    // variáveis que capturam dados do target
+    const cep = evento.target.elements['cep']
+    const logradouro = evento.target.elements['logradouro']
+    const bairro = evento.target.elements['bairro']
+    const localidade = evento.target.elements['localidade']
+    const uf = evento.target.elements['uf']
     //capturando dados de target> elements do console (envio form) e inserindo como param. da função
-    criaEndereco(evento.target.elements['cep'].value, evento.target.elements['logradouro'].value, evento.target.elements['bairro'].value, evento.target.elements['localidade'].value, evento.target.elements['uf'].value)
+    criaEndereco(cep.value, logradouro.value, bairro.value, localidade.value, uf.value)
+    this.limparCamposForm()
 })
 
 function criaEndereco (cep,logradouro,bairro,localidade,uf) {
-
+// cria o elemento li do html
 const novoItem = document.createElement('li')
 novoItem.classList.add('item', 'itemLista', 'itemLi')
 //insere um elemento dentro do elemento object para manipular
@@ -69,18 +77,34 @@ const numCep = document.createElement('strong')
 numCep.innerHTML = cep
 
 novoItem.appendChild(numCep)
-novoItem.innerHTML += ", " + logradouro + ", " + bairro + ", " + localidade + ", " + uf
+novoItem.innerHTML += "(CEP), " + logradouro + ", " + bairro + ", " + localidade + ", " + uf + "."
 
-const lista = document.getElementById("lista")
 lista.appendChild(novoItem)
 
-/* criando o novo item do li
-const novoItem = document.createElement('li')
-novoItem.classList.add('item')
-novoItem.appendChild(cep,logradouro, bairro,localidade, uf)
-novoItem.innerHTML
-console.log(novoItem)
-
-const lista = document.getElementById('lista')
-lista.appendChild(novoItem) */
+// operações localStorage
+// criando o objeto
+const itemAtual = {
+    "cep":cep,
+    "logradouro": logradouro,
+    "bairro": bairro,
+    "localidade": localidade,
+    "uf": uf
 }
+arrayItens.push(itemAtual) //inserindo dentro do array
+//JSON.stringfy transforma o objeto em texto
+localStorage.setItem("item", JSON.stringify(arrayItens))
+
+
+
+}
+
+function limparCamposForm() {
+
+    document.getElementById('cep').value = '';
+    document.getElementById('logradouro').value = ''; 
+    document.getElementById('bairro').value = ''; 
+    document.getElementById('localidade').value = '';
+    document.getElementById('uf').value = ''; 
+}  
+
+

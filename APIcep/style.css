@@ -25,32 +25,42 @@ h1 {
     border-radius: 5px;
 }
 
+.gridform{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-column-gap: 10px;
+  }
+
+
 .lista{
     display: flex;   
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     flex-direction: column-reverse;
-    
-    
-    
+    padding-left: 0px;
     
 }
 
 .itemLista{   
-    margin: 7px 7px 7px -25px !important;
+    margin: 6px 0px 6px 0px !important;
     float: none !important;
     max-width: 350px;
     background-color: #d4e8ff;;
-    padding: 20px;
+    padding: 12px;
     box-shadow: rgba(0, 0, 0, 0.60) 0px 3px 8px;
     border-radius: 5px;
+    list-style-type: none;
+  
 }
 
 .itemLi {
     list-style: none;
+    display: inline-block;
     
-    
+}
+.itemLista:hover {
+    font-size: 1.1rem;
 }
 
 

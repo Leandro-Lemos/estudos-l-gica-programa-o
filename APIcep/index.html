@@ -50,18 +50,14 @@
 
         <div class="carousel-caption d-none d-md-block">
           <h5>Simplifique a sua busca</h5>
-          <p class="text-start
-  " class="text-center"> Buscar endereços nunca foi tão simples como agora.</p class="text-start
-    ">
+          <p class="text-center"> Buscar endereços nunca foi tão simples como agora.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="./imagens/imagem_dois_carrossel.jpg" class="d-block w-100 imagem-carrossel2" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5> Buscador de CEP Automático</h5>
-          <p class="text-start
-  ">Use nosso buscador e localize seu endereço.</p class="text-start
-    ">
+          <p class="text-center" >Use nosso buscador e localize seu endereço.</p>
         </div>
       </div>
 
@@ -78,35 +74,41 @@
   <div class="container pt-5 ">
     <!-- pt-5 é uma classe margin top -->
 
-  <h1>Consulta CEP</h1>
-  <div class="btncopy">
-    <input type="text" name="texto" id="texto" placeholder="Digite alguma coisa" value="01311-000" />
-    <button onclick="copiarTexto()">Copiar</button>
-  </div>
+    <h1>Consulta CEP</h1>
+    <div class="btncopy">
+      <input type="text" name="texto" id="texto" placeholder="Digite alguma coisa" value="01311-000" />
+      <button onclick="copiarTexto()">Copiar</button>
+    </div>
 
-    <form action="" class="mb-5 adicionar" id="novoItem">
+    <form action="" class="mb-3 adicionar" id="novoItem">
       <!-- Como criar com atalho >>> div.form-group col-6*5>label+input+small -->
       <div class="centered">
-        
-        <div class="form-group "><label for="cep">CEP</label><input type="text" class="form-control" maxlength="9"
+
+        <div class="form-group "><label for="cep">CEP</label><input type="text" class="form-control" maxlength="9" minlength="8" required 
             id="cep"><small>00000-000</small></div>
         <div class="form-group"><label for="logradouro">Logradouro</label><input type="text" class="form-control"
             id="logradouro"><small></small></div>
         <div class="form-group"><label for="bairro">Bairro</label><input type="text" class="form-control"
             id="bairro"><small></small></div>
-        <div class="form-group"><label for="localidade">Localidade</label><input type="text" class="form-control"
-            id="localidade"><small></small></div>
-        <div class="form-group "><label for="uf">UF</label><input type="text" class="form-control"
-            id="uf"><small></small>
+        
+        <div class="gridform">
+          <div class="form-group"><label for="localidade">Cidade</label><input type="text" class="form-control"
+              id="localidade"><small></small></div>
+          <div class="form-group"><label for="uf">UF</label><input type="text" class="form-control"
+              id="uf"><small></small>
+          </div>
         </div>
-        <div class="form-group pt-2 d-flex justify-content-end"><input type="submit" value="salvar" class="cadastrar" id="cadastrar">
-      </div>
+
+        <div class="form-group pt-2 d-flex justify-content-end"><input type="submit" value="salvar" class="cadastrar"
+            id="cadastrar">
+        </div>
       </div>
     </form>
   </div>
+  
   <div class="listaEnderecos">
     <ul class="lista " id="lista">
-      
+
     </ul>
   </div>
 
