@@ -47,3 +47,40 @@ cep.addEventListener("blur", (e) => {
 
     
 } )
+
+// funções salvar localstorage
+
+const form = document.getElementById("novoItem")
+
+form.addEventListener("submit", (evento) => {
+    evento.preventDefault()
+   // console.log(evento)
+
+    //capturando dados de target> elements do console (envio form) e inserindo como param. da função
+    criaEndereco(evento.target.elements['cep'].value, evento.target.elements['logradouro'].value, evento.target.elements['bairro'].value, evento.target.elements['localidade'].value, evento.target.elements['uf'].value)
+})
+
+function criaEndereco (cep,logradouro,bairro,localidade,uf) {
+
+const novoItem = document.createElement('li')
+novoItem.classList.add('item', 'itemLista', 'itemLi')
+//insere um elemento dentro do elemento object para manipular
+const numCep = document.createElement('strong')
+numCep.innerHTML = cep
+
+novoItem.appendChild(numCep)
+novoItem.innerHTML += ", " + logradouro + ", " + bairro + ", " + localidade + ", " + uf
+
+const lista = document.getElementById("lista")
+lista.appendChild(novoItem)
+
+/* criando o novo item do li
+const novoItem = document.createElement('li')
+novoItem.classList.add('item')
+novoItem.appendChild(cep,logradouro, bairro,localidade, uf)
+novoItem.innerHTML
+console.log(novoItem)
+
+const lista = document.getElementById('lista')
+lista.appendChild(novoItem) */
+}

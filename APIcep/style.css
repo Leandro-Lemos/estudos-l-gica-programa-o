@@ -25,11 +25,49 @@ h1 {
     border-radius: 5px;
 }
 
+.lista{
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+    
+    
+    
+    
+}
+
+.itemLista{   
+    margin: 7px 7px 7px -25px !important;
+    float: none !important;
+    max-width: 350px;
+    background-color: #d4e8ff;;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.60) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+.itemLi {
+    list-style: none;
+    
+    
+}
+
+
 .btncopy {
     display: flex;
     justify-content:center;
     padding: 10px 0 20px 0;
     
+}
+.cadastrar {
+    background-color: #32c206;
+    color: #06224a;
+    width: 80px;
+    box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 6px;
+}
+.cadastrar:hover {
+    font-size: 1.1rem;
 }
 
 input, button {
@@ -54,4 +92,7 @@ button {
     color: white;
     text-transform: uppercase;
     transition: 0.3s;
+}
+button:hover {
+    font-size: 1.3rem;
 }

@@ -84,7 +84,7 @@
     <button onclick="copiarTexto()">Copiar</button>
   </div>
 
-    <form class="mb-5">
+    <form action="" class="mb-5 adicionar" id="novoItem">
       <!-- Como criar com atalho >>> div.form-group col-6*5>label+input+small -->
       <div class="centered">
         
@@ -99,9 +99,15 @@
         <div class="form-group "><label for="uf">UF</label><input type="text" class="form-control"
             id="uf"><small></small>
         </div>
+        <div class="form-group pt-2 d-flex justify-content-end"><input type="submit" value="salvar" class="cadastrar" id="cadastrar">
+      </div>
       </div>
     </form>
-
+  </div>
+  <div class="listaEnderecos">
+    <ul class="lista " id="lista">
+      
+    </ul>
   </div>
 
   <script src="src/js/main.js"></script>
