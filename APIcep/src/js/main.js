@@ -39,7 +39,7 @@ cep.addEventListener("blur", (e) => {
         //isso é uma promisse assincrona, se der certo .then 
         .then((response) => {
             response.json()
-            .then(data => showData(data))
+                .then(data => showData(data))
 
         })
 
@@ -70,26 +70,33 @@ form.addEventListener("submit", (evento) => {
     const bairro = evento.target.elements['bairro']
     const localidade = evento.target.elements['localidade']
     const uf = evento.target.elements['uf']
-     // criando o objeto
-    //na refatoração começou a capturar o .value
-    const itemAtual = {
-        "cep": cep.value,
-        "logradouro": logradouro.value,
-        "bairro": bairro.value,
-        "localidade": localidade.value,
-        "uf": uf.value
-    }
-    
-    //na refatoração recebe o objeto como param
-    criaEndereco(itemAtual)
-    // operações localStorage
-   
-    
-    arrayItens.push(itemAtual) //inserindo dentro do array
-    //JSON.stringfy transforma o objeto em texto
-    localStorage.setItem("itens", JSON.stringify(arrayItens))
 
-    this.limparCamposForm()
+    // validação se cep já existe localizando no array e identificando se é igual ao valor do input CEP
+    const existeitem = arrayItens.find(elemento => elemento.cep === cep.value)
+    if (existeitem) {
+        alert('O cadastro já existe. Confira a lista.')
+    } else {
+        // criando o objeto
+        //na refatoração começou a capturar o .value
+        const itemAtual = {
+            "cep": cep.value,
+            "logradouro": logradouro.value,
+            "bairro": bairro.value,
+            "localidade": localidade.value,
+            "uf": uf.value
+        }
+
+        //na refatoração recebe o objeto como param
+        criaEndereco(itemAtual)
+        // operações localStorage
+
+
+        arrayItens.push(itemAtual) //inserindo dentro do array
+        //JSON.stringfy transforma o objeto em texto
+        localStorage.setItem("itens", JSON.stringify(arrayItens))
+
+        this.limparCamposForm()
+    }
 })
 
 function criaEndereco(item) {
@@ -103,7 +110,11 @@ function criaEndereco(item) {
     novoItem.appendChild(numCep)
     novoItem.innerHTML += "(CEP), " + item.logradouro + ", " + item.bairro + ", " + item.localidade + ", " + item.uf + "." // elemento captura da chave "bairro" do objeto
 
+    //cria botão delete chamando a função que cria o botão
+    novoItem.appendChild(botaoDeletar())
+
     lista.appendChild(novoItem)
+
 }
 
 function limparCamposForm() {
@@ -115,4 +126,13 @@ function limparCamposForm() {
     document.getElementById('uf').value = '';
 }
 
+function botaoDeletar() {
+    let imgdelete = document.createElement('img')
+    imgdelete.classList.add('btndeletar')
+    imgdelete.src = './imagens/deletemedia.png'
+    imgdelete.width = 40
+    imgdelete.height = 40
+    imgdelete.setAttribute("onclick", "cep.cep")
+    return imgdelete
+}
 

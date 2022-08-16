@@ -51,16 +51,18 @@ h1 {
     box-shadow: rgba(0, 0, 0, 0.60) 0px 3px 8px;
     border-radius: 5px;
     list-style-type: none;
+    
   
 }
 
 .itemLi {
     list-style: none;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     
 }
 .itemLista:hover {
-    font-size: 1.1rem;
+    background-color: #7acdee;;
 }
 
 
@@ -73,7 +75,7 @@ h1 {
 .cadastrar {
     background-color: #32c206;
     color: #06224a;
-    width: 80px;
+    width: 350px;
     box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 6px;
 }
 .cadastrar:hover {
@@ -105,4 +107,10 @@ button {
 }
 button:hover {
     font-size: 1.3rem;
+}
+
+.btndeletar:hover {
+    width: 15%;
+    height: 15%;
+    
 }
