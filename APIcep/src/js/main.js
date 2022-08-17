@@ -126,13 +126,28 @@ function limparCamposForm() {
     document.getElementById('uf').value = '';
 }
 
+const Modal = {
+    open(){
+        //abrir modal
+        //adicionar classe active
+        document.querySelector('.modal-overlay')
+        .classList.add('active')
+    },
+    close(){
+        //fechar modal
+        //remover classe active do modal
+        document.querySelector('.modal-overlay')
+        .classList.remove('active')
+    }
+} 
+
 function botaoDeletar() {
     let imgdelete = document.createElement('img')
     imgdelete.classList.add('btndeletar')
     imgdelete.src = './imagens/deletemedia.png'
     imgdelete.width = 40
     imgdelete.height = 40
-    imgdelete.setAttribute("onclick", "cep.cep")
+    imgdelete.setAttribute("onclick", "Modal.open()")     
     return imgdelete
 }
 
