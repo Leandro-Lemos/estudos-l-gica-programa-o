@@ -104,11 +104,11 @@ function criaEndereco(item) {
     const novoItem = document.createElement('li')
     novoItem.classList.add('item', 'itemLista', 'itemLi')
     //insere um elemento dentro do elemento object para manipular
-    const numCep = document.createElement('strong')
+    const numCep = document.createElement('p')
     numCep.innerHTML = item.cep // elemento item na posição cep (chave)
 
     novoItem.appendChild(numCep)
-    novoItem.innerHTML += "(CEP), " + item.logradouro + ", " + item.bairro + ", " + item.localidade + ", " + item.uf + "." // elemento captura da chave "bairro" do objeto
+    numCep.innerHTML += " (CEP), " + item.logradouro + ", " + item.bairro + ", " + item.localidade + ", " + item.uf + "." // elemento captura da chave "bairro" do objeto
 
     //cria botão delete chamando a função que cria o botão
     novoItem.appendChild(botaoDeletar())
@@ -145,8 +145,8 @@ function botaoDeletar() {
     let imgdelete = document.createElement('img')
     imgdelete.classList.add('btndeletar')
     imgdelete.src = './imagens/deletemedia.png'
-    imgdelete.width = 40
-    imgdelete.height = 40
+    imgdelete.width = 30
+    imgdelete.height = 30
     imgdelete.setAttribute("onclick", "Modal.open()")     
     return imgdelete
 }

@@ -76,9 +76,9 @@
     <div class="container pt-5 ">
       <!-- pt-5 é uma classe margin top -->
       <h1>Consulta CEP</h1>
-      <div class="btncopy">
+      <div class="inputcopy pb-2 ">
         <input type="text" name="texto" id="texto" placeholder="Digite alguma coisa" value="01311-000" />
-        <button onclick="copiarTexto()">Copiar</button>
+        <button class="btncopy" onclick="copiarTexto()">Copiar</button>
       </div>
       <form action="" class="mb-3 adicionar" id="novoItem">
         <!-- Como criar com atalho >>> div.form-group col-6*5>label+input+small -->
@@ -114,10 +114,10 @@
   <div class="modal-overlay">
     <div class="caixa">
       <div class="caixaConfirmaDelete">
-        <h2>Deseja excluir o endereço?</h2>
+        <h4>Deseja excluir o endereço?</h4>
         <div class="input-group actions">
-          <a onclick="Modal.close()" href="#" class="button cancel">Cancelar</a>
-          <button>Salvar</button>
+          <a onclick="Modal.close()" href="#" class="button voltar">Voltar</a>
+          <button class="excluiEndereco">Excluir</button>
         </div>
 
         </form>
