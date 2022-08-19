@@ -147,7 +147,18 @@ function botaoDeletar() {
     imgdelete.src = './imagens/deletemedia.png'
     imgdelete.width = 30
     imgdelete.height = 30
-    imgdelete.setAttribute("onclick", "Modal.open()")     
+    imgdelete.setAttribute("onclick", "Modal.open()") //conferir
+    imgdelete.addEventListener("click", function(){
+        del= this.parentNode
+    })     
     return imgdelete
 }
+
+function confirmaDeletar() {
+    del.remove()
+    Modal.close()
+}
+
+
+
 
