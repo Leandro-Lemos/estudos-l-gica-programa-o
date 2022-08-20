@@ -107,6 +107,9 @@ function criaEndereco(item) {
     const numCep = document.createElement('p')
     numCep.innerHTML = item.cep // elemento item na posição cep (chave)
 
+    // teste criar classe id dentro de li com cep
+    novoItem.setAttribute("id", item.cep)
+
     novoItem.appendChild(numCep)
     numCep.innerHTML += " (CEP), " + item.logradouro + ", " + item.bairro + ", " + item.localidade + ", " + item.uf + "." // elemento captura da chave "bairro" do objeto
 
@@ -150,11 +153,15 @@ function botaoDeletar() {
     imgdelete.setAttribute("onclick", "Modal.open()") //conferir
     imgdelete.addEventListener("click", function(){
         del= this.parentNode
+        console.log (del)
+        delid = del.id
+        console.log(delid)
+      
     })     
     return imgdelete
 }
 
-function confirmaDeletar() {
+function confirmaDeletar(teste) {
     del.remove()
     Modal.close()
 }
