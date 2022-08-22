@@ -107,7 +107,7 @@ function criaEndereco(item) {
     const numCep = document.createElement('p')
     numCep.innerHTML = item.cep // elemento item na posição cep (chave)
 
-    // teste criar classe id dentro de li com cep
+    //  criar  id dentro de li com cep para comparar com cep localstorage
     novoItem.setAttribute("id", item.cep)
 
     novoItem.appendChild(numCep)
@@ -161,10 +161,16 @@ function botaoDeletar() {
     return imgdelete
 }
 
-function confirmaDeletar(teste) {
+function confirmaDeletar() {
     del.remove()
     Modal.close()
+    //remover item do array
+    arrayItens.splice(arrayItens.findIndex(elemento => elemento.cep === delid),1)
+    //escrever alteração no localstorage
+    localStorage.setItem("itens", JSON.stringify(arrayItens))
 }
+
+
 
 
 
